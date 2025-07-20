@@ -1,0 +1,164 @@
+/* Custom CSS for SlotsDon Casino */
+
+/* Hero Section Background */
+.hero-section {
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ARb1xXykP4dRnNKuxccoOaZKh5bUMF.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Game Card Hover Effects */
+.game-card:hover .game-overlay {
+  opacity: 1;
+}
+
+.game-overlay {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Custom Scrollbar for Table */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #facc15;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #eab308;
+}
+
+/* Button Hover Effects */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  .hero-section .text-2xl {
+    font-size: 1.5rem;
+  }
+
+  .hero-section .md\:text-3xl {
+    font-size: 1.75rem;
+  }
+}
+
+/* Table Responsive Styling */
+@media (max-width: 640px) {
+  table {
+    font-size: 0.875rem;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Loading Animation for Images */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img:not([src]) {
+  opacity: 0;
+}
+
+/* Focus States for Accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #facc15;
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Container Max Width */
+.container {
+  max-width: 1200px;
+}
+
+/* Gold Gradient Text Effect */
+.text-yellow-400 {
+  background: linear-gradient(45deg, #facc15, #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Card Shadow Effects */
+.game-card,
+.bg-gray-800 {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.game-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+/* Animation for Hero Elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section > div > div {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Mobile Menu Styles (for future implementation) */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 24, 39, 0.95);
+    z-index: 50;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .hero-section,
+  header,
+  footer {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
